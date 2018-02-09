@@ -1,7 +1,10 @@
 {
-  "name": "meta-cloud",
+  "name": "kio-ng2-meta-cloud",
   "version": "0.0.0",
   "license": "MIT",
+  "module": "./src/app/meta-cloud/meta-cloud.module",
+  "main": "./src/app/meta-cloud/meta-cloud.module",
+  "typings": "./src/app/meta-cloud/meta-cloud.module.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
