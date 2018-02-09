@@ -1,3 +1,20 @@
-<p>
-  meta-cloud works!
-</p>
+<div class="outer">
+  <div class="inner">
+
+    <ul>
+
+      <li *ngFor="let item of dataItems">
+
+        <button type="button" 
+          [name]="'btnItem' + item?.index" 
+          [ngClass]="{'selected': isItemSelected(item)}"
+          (click)="onButtonClick($event,item)">
+          {{ item?.label }}
+        </button>
+
+      </li>
+
+    </ul>
+
+  </div>
+</div>
