@@ -47,5 +47,16 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
-  }
+  },
+  "description": "meta cloud component for digitorials",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afkm/kio-ng2-meta-cloud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/afkm/kio-ng2-meta-cloud/issues"
+  },
+  "homepage": "https://github.com/afkm/kio-ng2-meta-cloud#readme"
 }
