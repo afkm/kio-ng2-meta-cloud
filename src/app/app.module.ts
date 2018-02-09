@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { MetaCloudModule } from './meta-cloud/meta-cloud.module'
+
 
 
 @NgModule({
@@ -10,7 +12,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MetaCloudModule
   ],
   providers: [],
   bootstrap: [AppComponent]
