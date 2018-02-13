@@ -1,0 +1,6 @@
+/src
+karma.conf.js
+protractor.conf.js
+*.lock
+tslint.json
+/e2e

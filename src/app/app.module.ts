@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { MetaCloudModule } from './meta-cloud/meta-cloud.module'
+import { MetaCloudModule } from '../../module/meta-cloud.module'
 
 
 
