@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IDataItem, IComponentOptions } from './meta-cloud/meta-cloud.module'
+import { IDataItem, IDataGroup, IComponentOptions } from './meta-cloud/meta-cloud.module'
 
 
 @Component({
@@ -11,22 +11,19 @@ export class AppComponent {
   title = 'app';
 
 
-  testData:IDataItem<string>[]=[
+  testData:IDataGroup<string>[]=[
     {
       index: 0,
-      label: "Hello",
-      data: "Hello"
+      items: [ "Hello", "World", "Foobar" ]
     },
     {
       index: 1,
-      label: "World",
-      data: "World"
-    },
-    {
-      index: 2,
-      label: "Foobar",
-      data: "Foobar"
+      items: [ "Hello1", "World1", "Foobar1" ]
     }
   ]
+
+  onSelect(event:any){
+    console.log('did select', event)
+  }
 
 }

@@ -1,0 +1,20 @@
+<div class="outer">
+  <div class="inner">
+
+    <ul>
+
+      <li *ngFor="let item of dataItems">
+
+        <button type="button" 
+          [name]="'btnItem' + item?.index" 
+          [ngClass]="{'selected': isItemSelected(item)}"
+          (click)="onItemClick(item)">
+          {{ item?.label }}
+        </button>
+
+      </li>
+
+    </ul>
+
+  </div>
+</div>
