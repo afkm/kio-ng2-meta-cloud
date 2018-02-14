@@ -19,7 +19,7 @@ export class MetaCloudComponent <T> implements OnInit, IComponentOptions {
 
   @Input() multiple:boolean=true
 
-  @Output() click:EventEmitter<IEvent<T>>=new EventEmitter()
+  @Output() itemclick:EventEmitter<IEvent<T>>=new EventEmitter()
 
   @Output() select:EventEmitter<IDataItem<T>[]>=new EventEmitter()
 
@@ -28,7 +28,7 @@ export class MetaCloudComponent <T> implements OnInit, IComponentOptions {
   }
 
   onItemClick(event:IEvent<T>){
-    console.log('click event', event)
+    this.itemclick.emit(event)
   }
 
 }
