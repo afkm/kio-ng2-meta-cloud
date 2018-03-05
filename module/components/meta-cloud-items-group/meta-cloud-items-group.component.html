@@ -1,20 +1,13 @@
-<div class="outer">
-  <div class="inner">
+<ul class="meta-cloud-items">
 
-    <ul>
+  <li *ngFor="let item of dataItems" [ngClass]="{'selected': isItemSelected(item)}">
 
-      <li *ngFor="let item of dataItems">
+    <button type="button"
+      [name]="'btnItem' + item?.index"
+      (click)="onItemClick(item)">
+      <span [innerHtml]="item?.label"></span>
+  </button>
 
-        <button type="button" 
-          [name]="'btnItem' + item?.index" 
-          [ngClass]="{'selected': isItemSelected(item)}"
-          (click)="onItemClick(item)">
-          {{ item?.label }}
-        </button>
+</li>
 
-      </li>
-
-    </ul>
-
-  </div>
-</div>
+</ul>
