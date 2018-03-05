@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IDataItem, IDataGroup, IComponentOptions } from './meta-cloud/meta-cloud.module'
+import { IDataItem, IDataGroup, IComponentOptions } from '../../module/meta-cloud.module'
 
 
 @Component({
