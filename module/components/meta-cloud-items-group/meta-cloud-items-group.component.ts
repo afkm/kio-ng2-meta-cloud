@@ -13,14 +13,12 @@ export class MetaCloudItemsGroupComponent <T> implements OnInit {
 
   constructor() { }
 
-  @Input() selectedItems:IDataItem<T>[]=[]
+  @Input() selectedIndex:number=-1
 
   @Input('group') dataGroup:IDataGroup<T>
 
   @Input('items') dataItems:IDataItem<T>[]=[]
   
-  @Input() multiple:boolean=true
-
   @Output('itemclick') click:EventEmitter<IEvent<T>>=new EventEmitter()
 
   @Output() select:EventEmitter<IDataItem<T>[]>=new EventEmitter()
@@ -33,11 +31,17 @@ export class MetaCloudItemsGroupComponent <T> implements OnInit {
 
   public isItemSelected ( item:IDataItem<T> ):boolean {
 
-    return this.selectedItems.findIndex ( (selItem:IDataItem<T>) => selItem.index === item.index ) > -1
+    return this.selectedIndex === item.index
 
   }
 
+  public selectItem ( item?:IDataItem<T> ) {
+    this.selectedIndex = item ? item.index : -1
+  }
+
   public onItemClick (item:IDataItem<T>) {
+
+    this.selectItem(item)
 
     this.click.emit({
       group: this.dataGroup,
