@@ -1,6 +1,6 @@
 {
   "name": "kio-ng2-meta-cloud",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "module": "./module/meta-cloud.module",
   "main": "./module/meta-cloud.module",
