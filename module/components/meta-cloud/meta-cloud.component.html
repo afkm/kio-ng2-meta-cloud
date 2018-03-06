@@ -1,6 +1,6 @@
 <ul class="meta-cloud-groups">
 
-  <li *ngFor="let dataGroup of dataGroups">
+  <li *ngFor="let dataGroup of dataGroups; let i = index" [class]="'level-' + i">
 
     <kio-meta-cloud-items-group [group]="dataGroup" (itemclick)="onItemClick($event)">
     </kio-meta-cloud-items-group>
